@@ -1,4 +1,5 @@
 name: CI/CD pipeline
+
 on:
   push:
     branches:
@@ -8,9 +9,9 @@ on:
       - main
   workflow_dispatch:
 
- permissions:
-  contents: write # for actions/checkout
-  id-token: write # for actions/checkout 
+permissions:
+  contents: write    # for actions/checkout and gh-pages deployment
+  id-token: write    # if using OIDC (not strictly needed here)
 
 jobs:
   build:
